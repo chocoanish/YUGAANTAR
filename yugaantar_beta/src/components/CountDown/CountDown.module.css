@@ -1,0 +1,29 @@
+.countdownItem {
+  border-radius: 0;
+  align-self: stretch;
+  display: flex;
+  flex-direction: column;
+  margin: auto 0;
+}
+
+@media (max-width: 991px) {
+  .countdownItem {
+    white-space: initial;
+  }
+}
+
+.countdownValue {
+  letter-spacing: 2.5px;
+  align-self: center;
+  font: 400 46px Monomaniac One, -apple-system, Roboto, Helvetica, sans-serif;
+}
+
+@media (max-width: 991px) {
+  .countdownValue {
+    font-size: 36px;
+  }
+}
+
+.countdownLabel {
+  font: 600 22px Source Sans Pro, -apple-system, Roboto, Helvetica, sans-serif;
+}

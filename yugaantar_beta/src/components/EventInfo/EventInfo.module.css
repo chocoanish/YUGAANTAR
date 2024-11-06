@@ -1,0 +1,16 @@
+.infoItem {
+  display: flex;
+  gap: 10px;
+}
+
+.infoIcon {
+  aspect-ratio: 1;
+  object-fit: contain;
+  object-position: center;
+  width: 36px;
+}
+
+.infoText {
+  flex-basis: auto;
+  margin: auto 0;
+}
