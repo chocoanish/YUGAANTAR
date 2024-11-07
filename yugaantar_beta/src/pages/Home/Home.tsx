@@ -4,8 +4,9 @@ import CountdownItem from '../../components/CountDown/CountDown';
 import EventInfo from '../../components/EventInfo/EventInfo';
 import { useCountdownStore } from '../../store/countDown';
 
+import Navbar from '../../components/Navbar/Navbar';
+
 const YugaantarFest: React.FC = () => {
-  const navItems = ['Events', 'Timeline', 'Sponsors', 'Contact Us'];
   const { days, hours, minutes, seconds, calculateTimeLeft } = useCountdownStore();
 
   useEffect(() => {
@@ -23,17 +24,7 @@ const YugaantarFest: React.FC = () => {
 
   return (
     <main className={styles.landingPage}>
-      <header className={styles.header}>
-        <img loading="lazy" src="./YugaantarLogo.svg" alt="Yugaantar Fest Logo" className={styles.logo} />
-        <nav className={styles.nav}>
-          {navItems.map((item, index) => (
-            <a key={index} href={`#${item.toLowerCase().replace(' ', '-')}`} className={styles.navLink}>
-              {item}
-            </a>
-          ))}
-        </nav>
-      </header>
-
+      <Navbar/>
       <h1 className={styles.festTitle}>
         <span>Bangalore's most awaited </span>
         <span className={styles.underlinedText}>Tech Fest</span>

@@ -1,0 +1,36 @@
+.header {
+    display: flex;
+    width: 100%;
+    color: #d2fc3c;
+    position: relative;
+    font: 500 18px Lexend, sans-serif;
+    margin-top: 40px;
+    justify-content: center; 
+  }
+  
+  .logo {
+    position: absolute;
+    left: 0; 
+    top: -20px;
+  }
+  
+  .nav {
+    display: flex;
+    align-items: center;
+    gap: 40px 60px;
+    flex-wrap: wrap;
+    margin: auto 0;
+  }
+  @media (max-width: 991px) {
+    .nav {
+      max-width: 100%;
+    }
+  }
+  
+  .navLink {
+    align-self: stretch;
+    margin: auto 0;
+    text-decoration: none;
+    color: inherit;
+  }
+  
