@@ -1,15 +1,24 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import styles from './Home.module.css';
 import CountdownItem from '../../components/CountDown/CountDown';
 import EventInfo from '../../components/EventInfo/EventInfo';
+import { useCountdownStore } from '../../store/countDown';
 
 const YugaantarFest: React.FC = () => {
   const navItems = ['Events', 'Timeline', 'Sponsors', 'Contact Us'];
+  const { days, hours, minutes, seconds, calculateTimeLeft } = useCountdownStore();
+
+  useEffect(() => {
+    calculateTimeLeft();
+    const timer = setInterval(calculateTimeLeft, 1000);
+    return () => clearInterval(timer);
+  }, [calculateTimeLeft]);
+
   const countdownItems = [
-    { value: '60', label: 'DAYS' },
-    { value: '24', label: 'HOURS' },
-    { value: '60', label: 'MINUTES' },
-    { value: '60', label: 'SECONDS' },
+    { value: days.toString(), label: 'DAYS' },
+    { value: hours.toString(), label: 'HOURS' },
+    { value: minutes.toString(), label: 'MINUTES' },
+    { value: seconds.toString(), label: 'SECONDS' },
   ];
 
   return (
@@ -30,7 +39,7 @@ const YugaantarFest: React.FC = () => {
         <span className={styles.underlinedText}>Tech Fest</span>
       </h1>
       <h2 className={styles.festName}>Yugaantar</h2>
-      <p className={styles.festYear}>SST FEST 2028</p>
+      <p className={styles.festYear}>SST FEST 2025</p>
       <p className={styles.festDescription}>
         <span className={styles.highlightedText}>Scaler School of Technology's </span>
         premier Technology and Cultural Festival with live events, exciting prize pools and networking opportunities with top industry professionals.
@@ -39,9 +48,9 @@ const YugaantarFest: React.FC = () => {
       <button className={styles.primaryButton}>Book Tickets</button>
       <button className={styles.secondaryButton}>Explore Events</button>
 
-        <img className={styles.blue_background} src="./Ellipse.svg" alt=""/>
+      <img className={styles.blue_background} src="./Ellipse.svg" alt=""/>
       <section className={styles.eventInfo}>
-        <EventInfo iconSrc="./Calendar.svg" text="June 1 & 2, 2024" alt="Calendar icon" />
+        <EventInfo iconSrc="./Calendar.svg" text="January 1 & 2, 2025" alt="Calendar icon" />
         <EventInfo iconSrc="./MapPin.svg" text="Scaler Campus, Electronic City" alt="Location icon" />
       </section>
 

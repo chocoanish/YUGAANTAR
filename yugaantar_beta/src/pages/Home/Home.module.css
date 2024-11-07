@@ -4,7 +4,7 @@
   color: #d2fc3c;
   position: relative;
   font: 500 18px Lexend, sans-serif;
-  margin-top: 20px;
+  margin-top: 40px;
   justify-content: center; 
 }
 
@@ -125,6 +125,9 @@
   font: 500 18px Lexend, sans-serif;
 }
 
+.blue_background{
+  position: absolute;
+}
 
 
 .countdown {
@@ -153,7 +156,7 @@
   overflow: hidden;
   align-items: center;
   color: #ffffff;
-  padding: 32px 80px 1831px 40px;
+  padding: 0 80px 1831px 40px;
   position: relative;
 }
 
