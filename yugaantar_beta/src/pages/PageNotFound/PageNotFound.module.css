@@ -1,7 +1,7 @@
 .container {
   width: 100%;
-  min-height: 100vh;
-  background-color: #f3f4f6; 
+  min-height: 150vh;
+  background-color: #06061F; 
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -10,6 +10,23 @@
   inset: 0;
   margin: auto;
   transform: translateY(-100px);
+  transition: background 1s ease-in-out;
+}
+
+.morning {
+  background: linear-gradient(
+    135deg,
+    #87CEEB 0%,
+    #E0FFFF 100%
+  );
+}
+
+.evening {
+  background: linear-gradient(108deg, #FFC1A1 0%, #FF9E80 50%, #FB6BB8 100%);
+}
+
+.night {
+  background: linear-gradient(135deg, #0B2A60 0%, #06061F 100%);
 }
 
 .content {
@@ -21,39 +38,50 @@
 
 .numberLeft {
   position: relative;
-  font-size: 150px;         
+  font-size: 120px;         
   font-weight: bold;  
   font-family: "Sriracha", cursive;
   color: transparent;      
-  -webkit-text-stroke: 0.1px rgb(105, 105, 252);
+  -webkit-text-stroke: 0.1px #5757ff;
   animation: random-float 6s ease-in-out infinite;
 }
 
 .numberRight {
   position: relative;
-  font-size: 150px;         
+  font-size: 120px;         
   font-weight: bold;       
   font-family: "Sriracha", cursive;   
   color: transparent;      
-  -webkit-text-stroke: 0.1px rgb(250, 111, 111);
+  -webkit-text-stroke: 0.1px #ff3434;
   animation: random-float-delayed 6s ease-in-out infinite;
 }
 
 .image {
   border-radius: 0.5rem; 
-  width: 20rem; 
-  height: 20rem;
+  width: 16rem; 
+  height: 16rem;
   transform-origin: top center; 
   animation: pendulum 2.5s infinite;
 }
 
 .notFoundText {
   margin-top: -2rem;
-  font-size: 4.5rem;      
+  font-size: 3rem;      
   font-weight: bold;  
   font-family: "Poppins", sans-serif;
   color: transparent;      
   -webkit-text-stroke: 2px black;
+}
+
+.message {
+  color: #333333;
+  /* color: #ffffff; */
+  text-align: center;
+  font-size: 1rem;
+  font-family: "Poppins", sans-serif;
+  margin-bottom: 20px;
+  letter-spacing: 1px;
+  width: 35rem;
 }
 
 .btn {
@@ -95,7 +123,7 @@
 
 .btn i {
   font-style: normal;
-  line-height: 4.5rem;
+  line-height: 3.5rem;
   display: inline-block;
   height: 100%;
   padding-left: 1px;
@@ -164,15 +192,15 @@
 
 @keyframes pendulum {
   0% {
-    transform: rotate(-15deg); 
-    animation-timing-function: ease-in-out;
-  }
-  50% {
     transform: rotate(15deg); 
     animation-timing-function: ease-in-out;
   }
-  100% {
+  50% {
     transform: rotate(-15deg); 
+    animation-timing-function: ease-in-out;
+  }
+  100% {
+    transform: rotate(15deg); 
     animation-timing-function: ease-in-out;
   }
 }
