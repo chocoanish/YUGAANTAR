@@ -3,8 +3,8 @@ import { Home } from 'lucide-react';
 import styles from './PageNotFound.module.css';
 
 // import Clouds from './Clouds';
-// import Evening from './Evening';
-import Stars from './Stars'
+import Evening from './Evening';
+// import Stars from './Stars'
 
 const PageNotFound: React.FC = () => {
   const [position, setPosition] = useState(0);
@@ -15,7 +15,7 @@ const PageNotFound: React.FC = () => {
   useEffect(() => {
     const updateTimeOfDay = () => {
       // const currentHour = new Date().getHours();
-      const currentHour = 20;
+      const currentHour = 13;
       console.log(currentHour)
       
       let newTimeOfDay: 'morning' | 'evening' | 'night';
@@ -80,8 +80,8 @@ const PageNotFound: React.FC = () => {
   return (
     <div className={`${styles.container} ${backgroundClass}`}>
       {/* <Clouds />  */}
-      {/* <Evening /> */}
-      <Stars />
+      <Evening />
+      {/* <Stars /> */}
       <div className={styles.content}>
         <div className={styles.numberLeft}>4</div>
         <img src="./404.svg" alt="404" className={styles.image} />
