@@ -30,12 +30,10 @@ const Moon: React.FC = () => {
     <div className={styles.moonContainer}>
       <div className={styles.moon}>
         <div className={styles.moonOverlay} />
-        {/* Moon craters */}
         <div className={`${styles.crater} ${styles.crater1}`} />
         <div className={`${styles.crater} ${styles.crater2}`} />
         <div className={`${styles.crater} ${styles.crater3}`} />
       </div>
-      {/* Moon glow effect */}
       <div className={styles.moonGlow} />
     </div>
   );
