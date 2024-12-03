@@ -3,6 +3,7 @@ import styles from "./Home.module.css";
 import CountdownItem from "../../components/CountDown/CountDown";
 import EventInfo from "../../components/EventInfo/EventInfo";
 import { useCountdownStore } from "../../store/countDown";
+import { festTitle, primeEvent1, primeEvent2, primeEvent3 } from '../../assets/Images'
 
 import Navbar from "../../components/Navbar/Navbar";
 
@@ -23,6 +24,12 @@ const YugaantarFest: React.FC = () => {
     { value: seconds.toString(), label: "SECONDS" },
   ];
 
+   const eventItems = [
+    { value: 'Tech Odyssey', imgUrl: primeEvent1 },
+    { value: 'Gaming Arena', imgUrl: primeEvent2 },
+    { value: 'Music Revolution', imgUrl: primeEvent3 }
+    , ]
+  
   return (
     <>
     <div className={styles.background}>
@@ -31,12 +38,11 @@ const YugaantarFest: React.FC = () => {
       <main className={styles.landingPage}>
         <Navbar />
         <div className={styles.container}>
+        <img src={festTitle} className={styles.festName}/>
         <h1 className={styles.festTitle}>
           <span>Bangalore's most awaited </span>
           <span className={styles.underlinedText}>Tech Fest</span>
         </h1>
-        <h2 className={styles.festName}>Yugaantar</h2>
-        <p className={styles.festYear}>SST FEST 2025</p>
         <p className={styles.festDescription}>
           <span className={styles.highlightedText}>
             Scaler School of Technology's{" "}
@@ -45,10 +51,10 @@ const YugaantarFest: React.FC = () => {
           prize pools and networking opportunities with top industry
           professionals.
         </p>
-
+        <div className={styles.actionButtons}>
         <button className={styles.primaryButton}>Book Tickets</button>
         <button className={styles.secondaryButton}>Explore Events</button>
-
+        </div>
         <section className={styles.eventInfo}>
           <EventInfo
             iconSrc="./Calendar.svg"
@@ -74,7 +80,11 @@ const YugaantarFest: React.FC = () => {
         </section>
 
         <section className={styles.events_list_box}>
-          
+        {eventItems.map((item, index) => (
+            <div key={index} style={{ backgroundImage: (`${item.imgUrl}`)}} className={styles.primeEvents}>
+              {item.value}
+            </div>
+          ))}
         </section>
       </main>
     </>

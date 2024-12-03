@@ -10,8 +10,8 @@
 
 .festTitle {
   text-align: center;
-  margin-top: 70px;
-  font: 400 46px "Source Sans 3", -apple-system, Roboto, Helvetica, sans-serif;
+  margin-top: 2rem;
+  font: 400 32px "Source Sans 3", -apple-system, Roboto, Helvetica, sans-serif;
 }
 
 @media (max-width: 991px) {
@@ -25,8 +25,8 @@
 .festName {
   color: #d2fc3c;
   text-align: center;
-  margin-top: 30px;
-  font: 700 76px Lexend, sans-serif;
+  margin-top: 5rem;
+  width: 45%;
 }
 
 @media (max-width: 991px) {
@@ -36,17 +36,11 @@
   }
 }
 
-.festYear {
-  text-align: center;
-  margin-top: 20px;
-  font: 600 30px "Source Sans 3", -apple-system, Roboto, Helvetica, sans-serif;
-}
-
 .festDescription {
   text-align: center;
   margin-top: 40px;
-  width: 719px;
-  font: 400 22px "Source Sans 3", -apple-system, Roboto, Helvetica, sans-serif;
+  width: 44rem;
+  font: 400 18px "Source Sans 3", -apple-system, Roboto, Helvetica, sans-serif;
 }
 
 @media (max-width: 991px) {
@@ -55,10 +49,17 @@
   }
 }
 
+.actionButtons{
+  display: flex;
+  margin-top: 3rem;
+  margin-bottom: 5rem;
+  justify-content: space-around;
+  width: 30rem;
+}
+
 .primaryButton {
   border-radius: 10px;
   background-color: #d2fc3c;
-  margin-top: 40px;
   padding: 18px 58px;
   color: #06061f;
   font: 700 16px Lexend, sans-serif;
@@ -75,7 +76,6 @@
 .secondaryButton {
   border-radius: 10px;
   background-color: #f5449e;
-  margin-top: 30px;
   padding: 12px 30px;
   font: 500 14px Lexend, sans-serif;
   color: #ffffff;
@@ -91,7 +91,6 @@
 
 .eventInfo {
   display: flex;
-  margin-top: 40px;
   max-width: 100%;
   gap: 20px;
   flex-wrap: wrap;
@@ -188,9 +187,23 @@
 }
 
 .events_list_box{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
   width: 100%;
-  background: linear-gradient(to top, #06061f, #06061f, #06061f00, transparent);
-  height: 300px;
-  margin-top: -300px;
+  background-color: transparent;
   z-index: 3;
+}
+
+
+.primeEvents{
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  width: 300px;
+  height: 200px;
+  padding: 20px;
+  border-radius: 20px 20px 0 0;
+  background-color: black;
+  font: 500 18px Lexend, sans-serif;
 }
