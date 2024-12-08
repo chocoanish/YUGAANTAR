@@ -36,3 +36,17 @@
     color: inherit;
   }
   
+
+  @media (max-width: 768px){
+    .nav{
+      gap: 40px;
+    }
+    .header{
+      font: 500 14px Lexend, sans-serif;
+    }
+    .logo{
+      width: 13%;
+      left: 0;
+      top: -10px;
+    }
+  }
