@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Home from './pages/Home/Home';
 import ContactUs from './pages/ContactUs/ContactUs';
 import PageNotFound from './pages/PageNotFound/PageNotFound'
+import Events from './pages/Events/Events';
 
 const App: React.FC = () =>{
   return(
@@ -11,6 +12,7 @@ const App: React.FC = () =>{
         <Route path = '/' element = { <Home/> }/>
         <Route path = '/contact' element = { <ContactUs/> }/>
         <Route path="*" element={<PageNotFound />} />
+        <Route path="/events" element={<Events/>}/>
       </Routes>
     </Router>
   );

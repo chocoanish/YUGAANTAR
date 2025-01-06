@@ -8,7 +8,7 @@ const Navbar: React.FC = () => {
         <img loading="lazy" src="./YugaantarLogo.svg" alt="Yugaantar Fest Logo" className={styles.logo} />
         <nav className={styles.nav}>
           {navItems.map((item, index) => (
-            <a key={index} href={`#${item.toLowerCase().replace(' ', '-')}`} className={styles.navLink}>
+            <a key={index} href={`${item.toLowerCase().replace(' ', '-')}`} className={styles.navLink}>
               {item}
             </a>
           ))}
