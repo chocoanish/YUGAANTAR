@@ -1,0 +1,84 @@
+.container {
+    position: absolute;
+    inset: 0;
+    overflow: hidden;
+    background: linear-gradient(to bottom, #0a1433 0%, #1a1b4b 100%);
+    pointer-events: none;
+    z-index: -1;
+  }
+  
+  .star {
+    position: absolute;
+    border-radius: 50%;
+    background-color: white;
+    animation: twinkle 3s ease-in-out infinite;
+    will-change: transform, opacity;
+  }
+  
+  .moonContainer {
+    position: absolute;
+    top: 20rem;
+    left: 2rem;
+  }
+  
+  .moon {
+    width: 96px;
+    height: 96px;
+    background-color: #fff5e6;
+    border-radius: 50%;
+    position: relative;
+    box-shadow: 0 0 50px rgba(255, 248, 220, 0.4);
+  }
+  
+  .moonOverlay {
+    position: absolute;
+    inset: 0;
+    border-radius: 50%;
+    background: linear-gradient(to right, transparent, rgba(255, 248, 220, 0.3));
+  }
+  
+  .moonGlow {
+    position: absolute;
+    inset: -2rem;
+    background-color: rgba(255, 248, 220, 0.2);
+    border-radius: 50%;
+    filter: blur(1rem);
+  }
+  
+  .crater {
+    position: absolute;
+    background-color: rgba(255, 248, 220, 0.3);
+    border-radius: 50%;
+  }
+  
+  .crater1 {
+    top: 24px;
+    left: 32px;
+    width: 16px;
+    height: 16px;
+  }
+  
+  .crater2 {
+    top: 40px;
+    right: 24px;
+    width: 12px;
+    height: 12px;
+  }
+  
+  .crater3 {
+    bottom: 32px;
+    left: 40px;
+    width: 8px;
+    height: 8px;
+  }
+  
+  @keyframes twinkle {
+    0%, 100% {
+      opacity: 1;
+      transform: scale(1);
+    }
+    50% {
+      opacity: 0.3;
+      transform: scale(0.7);
+    }
+  }

@@ -1,0 +1,7 @@
+/* FestMoments.module.css */
+.container {
+    min-height: 100vh;
+    background-color: #0A051F;
+    position: relative;
+    overflow: hidden;
+  }

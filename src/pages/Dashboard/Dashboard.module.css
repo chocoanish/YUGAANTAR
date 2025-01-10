@@ -1,0 +1,35 @@
+.container {
+    min-height: 100vh;
+    background-color: #0A051F;
+    position: relative;
+    overflow: hidden;
+}
+
+.welcomeText{
+    margin-top: 3rem;
+    margin-left: 20rem;
+}
+
+.welcomeText>h1 {
+    color: #D2FC3C;
+    font-family: Lexend;
+    font-size: 4rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.welcomeText > p {
+    color: #91D3ED;
+    font-family: Lexend;
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+
+.sidebar{
+    background-color: white;
+    width: 20%;
+    height: 80vh;
+}

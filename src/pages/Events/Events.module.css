@@ -1,0 +1,203 @@
+.container {
+  background: #07071F;
+  min-height: 100vh;
+}
+
+.eventContainer {
+  background-color: #06061f;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  align-items: center;
+  color: #ffffff;
+  position: relative;
+}
+
+.header {
+  text-align: center;
+  font-family: Lexend;
+}
+
+.title {
+  color: #D2FC3C;
+  text-align: center;
+  font-family: Lexend;
+  font-size: 80px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  margin-top: 3rem;
+  margin-bottom: 1rem;
+}
+
+.subtitle {
+  color: #FFF;
+  text-align: center;
+  font-family: Poppins;
+  font-size: 25px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.subtitleEvents {
+  color: #91D3ED;
+  font-family: Poppins;
+  font-size: 25px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+.subtitleHighlight {
+  color: #FFF;
+  font-family: Poppins;
+  font-size: 31px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+.timeline {
+  max-width: 1200px;
+  margin: 6rem auto;
+}
+
+.dateSection {
+  display: flex;
+  gap: 2rem;
+  margin-bottom: 4rem;
+}
+
+.date {
+  text-align: center;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.date::after {
+  content: '';
+  position: relative;
+  width: 2px; 
+  height: 100%; 
+  background: repeating-linear-gradient(
+    to bottom,
+    white,
+    white 4px,
+    transparent 4px,
+    transparent 8px
+  ); 
+}
+
+
+.day {
+  color: #FFF;
+  font-family: Lexend;
+  font-size: 50px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  margin-bottom: -14px;
+}
+
+.month {
+  color: #FFF;
+  font-family: Lexend;
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+.eventsList{
+  width: 100%;
+}
+
+.eventGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1.5rem;
+  width: 100%;
+}
+
+.eventCard {
+  position: relative;
+  background-color: rgba(255, 255, 255, 0.05);
+  border-radius: 8px;
+  overflow: hidden;
+  transition: transform 0.2s;
+}
+
+.eventCard:hover {
+  transform: translateY(-4px);
+}
+
+.eventImage {
+  overflow: hidden;
+  height: 16rem;
+}
+
+.eventImage img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.eventInfo {
+  position: absolute;
+  padding: 1rem;
+  bottom: 0;
+}
+
+.eventType {
+  color: #FFF;
+  font-family: "Source Code Pro";
+  font-size: 10px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.eventName {
+  color: #FFF;
+  font-family: "Source Code Pro";
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+.eventRegistered {
+  color: #FFF;
+  font-family: "Source Code Pro";
+  font-size: 10px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+@media (max-width: 768px) {
+  .dateSection {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .date {
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+  }
+
+  .date::after {
+    display: none;
+  }
+
+  .day,
+  .month {
+    display: inline;
+  }
+}

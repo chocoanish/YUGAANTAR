@@ -1,0 +1,23 @@
+.container {
+    position: absolute;
+    inset: 0;
+    overflow: hidden;
+    pointer-events: none;
+    z-index: -1;
+  }
+  
+  .cloud {
+    position: absolute;
+    width: 200px;
+    height: auto;
+    will-change: transform;
+  }
+  
+  @keyframes moveCloud {
+    0% {
+      transform: translateX(-200px);
+    }
+    100% {
+      transform: translateX(calc(100vw + 200px));
+    }
+  }
