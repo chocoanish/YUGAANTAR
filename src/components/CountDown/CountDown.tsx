@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from './Countdown.module.css';
+import styles from './CountDown.module.css'
 
 interface CountdownItemProps {
   value: string;
