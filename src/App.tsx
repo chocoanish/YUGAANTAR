@@ -5,7 +5,7 @@ import ContactUs from './pages/ContactUs/ContactUs';
 import PageNotFound from './pages/PageNotFound/PageNotFound'
 import Events from './pages/Events/Events';
 import Merch from './pages/Merch/Merch';
-import Dashboard from './pages/Dashboard/Dashboard';
+// import Dashboard from './pages/Dashboard/Dashboard';
 
 const App: React.FC = () =>{
   return(
@@ -16,7 +16,7 @@ const App: React.FC = () =>{
         <Route path="*" element={<PageNotFound />} />
         <Route path="/events" element={<Events/>}/>
         <Route path='/merch' element={<Merch/>}/>
-        <Route path='/dashboard' element={<Dashboard/>}/>
+        {/* <Route path='/dashboard' element={<Dashboard/>}/> */}
       </Routes>
     </Router>
   );
